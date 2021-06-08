@@ -5,7 +5,17 @@
 
 import random
 
-r = random.randint(1, 100)
+start = input('請決定隨機數字範圍開始值：')
+end = input('請決定隨機數字範圍結束值：')
+start = int(start)
+end = int(end)
+if start == end:
+    print('開始值不可與結束值一樣')
+elif start > end:
+	print('開始值不可大於結束值')
+
+r = random.randint(start, end)
+
 count = 0
 while True:
     count += 1
