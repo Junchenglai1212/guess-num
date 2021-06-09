@@ -11,8 +11,10 @@ start = int(start)
 end = int(end)
 if start == end:
     print('開始值不可與結束值一樣')
+    raise SystemExit
 elif start > end:
-	print('開始值不可大於結束值')
+    print('開始值不可大於結束值')
+    raise SystemExit # raise是觸發Exception(例外)的指令  SystemExit是一個Exception會導致程式結束
 
 r = random.randint(start, end)
 
